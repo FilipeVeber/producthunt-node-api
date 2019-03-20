@@ -3,12 +3,12 @@ const mongoose = require('mongoose');
 const requireDir = require('require-dir');
 const cors = require('cors');
 
-// Iniciando o app
+// Initializing app
 const app = express();
 app.use(express.json());
 app.use(cors());
 
-// Iniciando o DB
+// Initializing databse
 mongoose.connect('mongodb+srv://admin:admin@cluster0-enedb.mongodb.net/test?retryWrites=true', { useNewUrlParser: true });
 
 requireDir('./src/models');
